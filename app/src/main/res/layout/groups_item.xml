@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/status_blue"
+    android:layout_marginVertical="@dimen/spacing_4dp"
+    android:layout_marginStart="@dimen/spacing_16dp"
+    android:layout_marginEnd="@dimen/spacing_16dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:rippleColor="@color/light_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="@dimen/spacing_40dp"
+            android:layout_height="@dimen/spacing_40dp"
+            android:layout_marginStart="@dimen/spacing_16dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeAppearance.TribeManager.Circle"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+
+        <TextView
+            android:id="@+id/txtTribeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16dp"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/name"
+            android:textAppearance="@style/TextAppearance.TribeManager.Text.Title"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toStartOf="@+id/ivSettings"
+            app:layout_constraintStart_toEndOf="@+id/ivPhoto"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTribeDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4dp"
+            android:layout_marginBottom="@dimen/spacing_16dp"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:maxLines="2"
+            android:text="@string/tribe_description"
+            android:textAppearance="@style/TextAppearance.TribeManager.Text.Caption"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivSettings"
+            app:layout_constraintStart_toStartOf="@+id/txtTribeName"
+            app:layout_constraintTop_toBottomOf="@+id/txtTribeName" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivSettings"
+            android:layout_width="@dimen/spacing_40dp"
+            android:layout_height="@dimen/spacing_40dp"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            android:background="@drawable/baseline_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeAppearance.TribeManager.Circle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

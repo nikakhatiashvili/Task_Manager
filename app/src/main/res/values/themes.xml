@@ -1,0 +1,50 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.TaskManager" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#173348</item>
+        <item name="colorPrimaryVariant">#000c21</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#2977FF</item>
+        <item name="colorSecondaryVariant">#004ccb</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorOnBackground">@color/bg_gray</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/bg_gray</item>
+        <item name="colorAccent">?attr/colorPrimary</item>
+
+        <item name="android:colorBackground">@color/bg_gray</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:navigationBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:textColor">@color/primary_gray</item>
+
+        <!-- Default TextView text appearance. -->
+        <item name="android:textAppearanceSmall">@style/TextAppearance.TribeManager.Text.Body</item>
+
+        <item name="android:textViewStyle">@style/Widget.Tribe.TextView</item>
+        <item name="toolbarStyle">@style/Widget.Tribe.Toolbar</item>
+        <item name="bottomNavigationStyle">@style/Widget.Tribe.NavigationView</item>
+        <item name="materialButtonStyle">@style/Widget.Tribe.ButtonFilled</item>
+        <item name="cardViewStyle">@style/Widget.Tribe.CardView</item>
+        <item name="materialCardViewStyle">@style/Widget.Tribe.CardView</item>
+    </style>
+
+    <style name="CustomActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:background">@color/transparent</item>
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+
+
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_corner_bottom_sheet_background</item>
+    </style>
+</resources>

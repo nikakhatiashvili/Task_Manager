@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.TribeManager.Text" parent="TextAppearance.AppCompat" />
+
+    <style name="TextAppearance.TribeManager.Text.Title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+    <style name="TextAppearance.TribeManager.Text.Headline">
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:fontFamily">@font/sf_pro_text_bold</item>
+    </style>
+
+    <style name="TextAppearance.TribeManager.Text.Body">
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:fontFamily">@font/sf_pro_text_regular</item>
+    </style>
+
+    <style name="TextAppearance.TribeManager.Text.SubHeadline">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:fontFamily">@font/sf_pro_text_bold</item>
+    </style>
+
+    <style name="TextAppearance.TribeManager.Text.Footnote">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:fontFamily">@font/sf_pro_text_bold</item>
+    </style>
+
+    <style name="TextAppearance.TribeManager.Text.Footnote.Regular">
+        <item name="android:fontFamily">@font/sf_pro_text_regular</item>
+    </style>
+
+    <style name="TextAppearance.TribeManager.Text.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:fontFamily">@font/sf_pro_text_bold</item>
+    </style>
+
+</resources>

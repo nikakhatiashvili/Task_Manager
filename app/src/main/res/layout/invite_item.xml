@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/spacing_4dp"
+    android:layout_marginStart="@dimen/spacing_16dp"
+    android:layout_marginEnd="@dimen/spacing_16dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:rippleColor="@color/light_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/txtTribeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16dp"
+            android:layout_marginStart="@dimen/spacing_16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/name"
+            android:textAppearance="@style/TextAppearance.TribeManager.Text.Title"
+            android:textColor="@color/primary_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTribeDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            android:gravity="top"
+            android:maxLines="2"
+            android:text="@string/tribe_description"
+            android:textAppearance="@style/TextAppearance.TribeManager.Text.Caption"
+            android:textColor="@color/Caption_gray"
+            app:layout_constraintEnd_toStartOf="@+id/btnJoin"
+            app:layout_constraintStart_toStartOf="@+id/txtTribeName"
+            app:layout_constraintTop_toBottomOf="@+id/txtTribeName"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:gravity="top"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.TribeManager.Text.Footnote.Regular"
+            android:textColor="@color/Caption_gray"
+            app:layout_constraintStart_toStartOf="@+id/txtTribeDescription"
+            app:layout_constraintTop_toBottomOf="@+id/txtTribeDescription"
+            tools:text="Software engineer" />
+
+        <Button
+            android:id="@+id/btnJoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            style="@style/Widget.Tribe.ButtonCircle.Secondary"
+            android:backgroundTint="@color/green"
+            android:text="@string/join"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

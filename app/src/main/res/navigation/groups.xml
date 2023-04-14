@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/groups"
+    app:startDestination="@id/GroupsFragment">
+
+    <fragment
+        android:id="@+id/GroupsFragment"
+        android:name="com.example.taskmanager.presentation.groups.GroupsFragment"
+        android:label="Exchange rates"
+        >
+        <action
+            android:id="@+id/action_GroupsFragment_to_detailFragment2"
+            app:destination="@id/detailFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment2"
+        android:name="com.example.taskmanager.presentation.detail.DetailFragment"
+        android:label="DetailFragment"
+        >
+        <argument
+            android:name="groupId"
+            app:argType="integer" />
+        <argument
+            android:name="groupName"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
