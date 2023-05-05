@@ -42,6 +42,7 @@
 
     <string name="invited_by">invited by %s</string>
     <string name="dialog">TribeDialog</string>
+    <string name="task_dialog">Users</string>
     <string name="token">token</string>
     <string name="user">user</string>
     <string name="tribes">tribes</string>
@@ -65,5 +66,36 @@
     <string name="date">4/6/2023 6:00 PM</string>
     <string name="message">message</string>
     <string name="messages_could_not_be_loaded">messages_could_not_be_loaded</string>
+
+    <string name="reading">Read a book</string>
+    <string name="run">Go for a run</string>
+    <string name="wake_up">Wake up at 8AM</string>
+    <string name="meditate">Meditate</string>
+    <string name="no_social_media">Don\'t use social media</string>
+    <string name="learn_new">Spend 30 minutes to learn a new skill or topic</string>
+    <string name="write_new">write down 5 things you have acomplished every day</string>
+    <string name="is_this_task_for_everyone">is this Task for everyone?</string>
+    <string name="submit">Submit</string>
+
+    <string-array name="habits">
+        <item>@string/reading</item>
+        <item>@string/run</item>
+        <item>@string/wake_up</item>
+        <item>@string/meditate</item>
+        <item>@string/no_social_media</item>
+        <item>@string/learn_new</item>
+        <item>@string/write_new</item>
+    </string-array>
+
+
+    <string-array name="users">
+        <item>Choose from here</item>
+        <item>NikaKhatiashvili44@gmail.com</item>
+        <item>Random RandomaShvili</item>
+        <item>Natia Khatiashvili</item>
+        <item>Gio Khatiashvil</item>
+        <item>Gabi Khatiashvili</item>
+        <item>Sani SaniShvili</item>
+    </string-array>
 
 </resources>

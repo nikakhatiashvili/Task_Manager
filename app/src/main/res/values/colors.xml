@@ -24,4 +24,8 @@
     <color name="status_text_yellow">#8A835D</color>
     <color name="status_text_green">#4F7C71</color>
     <color name="status_text_blue">#557083</color>
+
+    <color name="default_box_stroke_color">@color/black</color>
+    <color name="et_color">#00D9FF</color>
+
 </resources>

@@ -43,7 +43,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         )
         val layoutManager = LinearLayoutManager(requireContext())
         layoutManager.reverseLayout = true
-        //layoutManager.stackFromEnd = true
         binding.messageRecyclerview.layoutManager = layoutManager
         collectFlow(viewModel.messages) {
             groupMessagesAdapter.submitData(it)

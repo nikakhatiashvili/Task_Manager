@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/forEveryone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_6dp"
+        android:layout_marginBottom="@dimen/spacing_6dp"
+        android:buttonTint="@color/et_color"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/email"
+        style="@style/TextAppearance.TribeManager.Text.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_6dp"
+        android:hint="nikaKhatiashvili"
+        android:textColor="@color/primary_gray"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/forEveryone"
+        app:layout_constraintStart_toEndOf="@+id/forEveryone"
+        app:layout_constraintTop_toTopOf="@+id/forEveryone"
+        app:layout_constraintVertical_bias="0.296" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name"
+        style="@style/TextAppearance.TribeManager.Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="nikolozi"
+        android:textColor="@color/primary_gray"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/forEveryone"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

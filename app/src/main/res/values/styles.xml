@@ -87,4 +87,18 @@
         <item name="contentInsetEnd">0dp</item>
     </style>
 
+
+    <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.AppTheme.TextInputLayoutList" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.AppTheme.TextInputLayout.HintTextAlt</item>
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/spacing_24dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/spacing_24dp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/spacing_24dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/spacing_24dp</item>
+    </style>
+
 </resources>

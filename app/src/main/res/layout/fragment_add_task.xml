@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.task.AddTaskFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/habit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColorHint="@color/gray"
+        app:boxStrokeColor="@color/et_color"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintAnimationEnabled="false"
+        android:layout_marginHorizontal="@dimen/spacing_24dp"
+        android:layout_marginTop="@dimen/spacing_54dp"
+        app:boxCornerRadiusBottomEnd="@dimen/spacing_24dp"
+        app:boxCornerRadiusBottomStart="@dimen/spacing_24dp"
+        app:boxCornerRadiusTopEnd="@dimen/spacing_24dp"
+        app:boxCornerRadiusTopStart="@dimen/spacing_24dp"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/habit_descriptionET"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_24dp"
+        android:layout_marginTop="@dimen/spacing_24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColorHint="@color/gray"
+        android:hint="@string/description"
+        app:boxCornerRadiusBottomEnd="@dimen/spacing_24dp"
+        app:boxCornerRadiusBottomStart="@dimen/spacing_24dp"
+        app:boxCornerRadiusTopEnd="@dimen/spacing_24dp"
+        app:boxCornerRadiusTopStart="@dimen/spacing_24dp"
+        app:boxStrokeColor="@color/et_color"
+        app:hintAnimationEnabled="false"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/habit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_16dp"
+        android:text="@string/is_this_task_for_everyone"
+        android:textColor="@color/primary_gray"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/habit_descriptionET"
+        app:layout_constraintTop_toBottomOf="@+id/habit_descriptionET" />
+
+    <CheckBox
+        android:id="@+id/forEveryone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:buttonTint="@color/et_color"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+
+    <Button
+        android:id="@+id/btn_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_24dp"
+        android:layout_marginTop="@dimen/spacing_24dp"
+        android:text="Select users here"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chosenUsersRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/spacing_24dp"
+        android:layout_marginHorizontal="@dimen/spacing_24dp"
+        android:layout_marginTop="@dimen/spacing_24dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/submitTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_users" />
+
+
+    <Button
+        android:id="@+id/submitTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_24dp"
+        android:layout_marginBottom="@dimen/spacing_54dp"
+        app:layout_constrainedHeight="true"
+        android:text="@string/add_task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,6 +12,7 @@ import com.example.taskmanager.StartDestinationAndRouteProvider
 import com.example.taskmanager.databinding.ActivityMainBinding
 import com.example.taskmanager.navigate
 import com.example.taskmanager.presentation.common.viewBinding
+import com.example.taskmanager.presentation.task.UsersAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collectLatest
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var routeProvider: StartDestinationAndRouteProvider
 
     private val mainViewModel by viewModels<MainViewModel>()
+
+    private lateinit var adapter: UsersAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +54,7 @@ class MainActivity : AppCompatActivity() {
             routeProvider.onRouteExecuted()
         }
     }
+
 }
 
 private fun <T> AppCompatActivity.collectFlow(flow: Flow<T>, onCollect: suspend (T) -> Unit) =
