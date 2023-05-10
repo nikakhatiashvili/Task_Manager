@@ -1,8 +1,8 @@
 package com.example.taskmanager.domain.tasks
 
 import com.example.taskmanager.common.OkResponse
-import com.example.taskmanager.domain.tasks.model.Habits
 import com.example.taskmanager.common.Result
+import com.example.taskmanager.domain.tasks.model.Habits
 
 interface TasksRepository {
 

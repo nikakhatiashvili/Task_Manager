@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.taskmanager.databinding.UserItemBinding
 import com.example.taskmanager.domain.tasks.UserUi
 
-class UsersAdapter(private val onCheckboxClicked: (String,Boolean) -> Unit) :
+class UsersAdapter(private val onCheckboxClicked: (String, Boolean) -> Unit) :
     RecyclerView.Adapter<UsersAdapter.ViewHolder>() {
 
     var data: List<UserUi> = emptyList()
@@ -24,8 +24,8 @@ class UsersAdapter(private val onCheckboxClicked: (String,Boolean) -> Unit) :
             currentData = data[adapterPosition]
             binding.email.text = currentData.email
             binding.name.text = currentData.name
-            binding.forEveryone.setOnCheckedChangeListener{ view,isChecked ->
-                onCheckboxClicked(currentData.id,isChecked)
+            binding.forEveryone.setOnCheckedChangeListener { view, isChecked ->
+                onCheckboxClicked(currentData.id, isChecked)
             }
         }
     }

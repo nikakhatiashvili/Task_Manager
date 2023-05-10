@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.taskmanager.presentation.common.viewBinding
 import com.example.taskmanager.R
 import com.example.taskmanager.databinding.InviteBottomSheetBinding
 import com.example.taskmanager.presentation.common.collectFlow
+import com.example.taskmanager.presentation.common.viewBinding
 import com.example.taskmanager.presentation.profile.ProfileViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint

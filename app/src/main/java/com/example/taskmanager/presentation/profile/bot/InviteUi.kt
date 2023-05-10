@@ -1,9 +1,9 @@
 package com.example.taskmanager.presentation.profile.bot
 
 import android.view.View
-import com.example.taskmanager.presentation.common.visible
 import com.example.taskmanager.domain.tribe.Invites
 import com.example.taskmanager.presentation.common.gone
+import com.example.taskmanager.presentation.common.visible
 
 interface InviteUi {
 

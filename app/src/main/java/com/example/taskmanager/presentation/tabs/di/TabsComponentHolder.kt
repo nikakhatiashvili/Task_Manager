@@ -1,7 +1,7 @@
 package com.example.taskmanager.presentation.tabs.di
 
-import com.example.taskmanager.presentation.groups.router.GroupTabsRouter
 import com.example.taskmanager.RouteProvider
+import com.example.taskmanager.presentation.groups.router.GroupTabsRouter
 import dagger.hilt.DefineComponent
 import dagger.hilt.EntryPoint
 import dagger.hilt.EntryPoints

@@ -40,9 +40,11 @@ class RepositoryLoadStateAdapter(private val retry: () -> Unit) :
                     is LoadState.Loading -> {
                         chooseState(true)
                     }
+
                     is LoadState.NotLoading -> {
                         chooseState(false)
                     }
+
                     is LoadState.Error -> {
                         chooseState(false, loadState.error.message)
                     }

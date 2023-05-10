@@ -1,8 +1,8 @@
 package com.example.taskmanager.presentation.detail
 
 import android.view.View
-import com.example.taskmanager.presentation.common.visible
 import com.example.taskmanager.presentation.common.gone
+import com.example.taskmanager.presentation.common.visible
 
 interface GroupUiState {
 
@@ -22,7 +22,7 @@ interface GroupUiState {
         }
     }
 
-    class SuccessUi() : GroupUiState {
+    class SuccessUi : GroupUiState {
         override fun apply(progressBar: View) {
             progressBar.gone()
         }

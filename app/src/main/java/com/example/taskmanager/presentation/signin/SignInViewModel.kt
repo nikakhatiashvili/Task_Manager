@@ -2,12 +2,9 @@ package com.example.taskmanager.presentation.signin
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.taskmanager.domain.auth.SignInUseCase
 import com.example.taskmanager.common.Dispatchers
-import com.example.taskmanager.domain.manageTribe.TribeIdRepository
-import com.example.taskmanager.presentation.common.collect
 import com.example.taskmanager.common.Result
-import com.google.firebase.auth.FirebaseAuth
+import com.example.taskmanager.domain.auth.SignInUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -39,6 +36,7 @@ class SignInViewModel @Inject constructor(
                 is Result.ApiSuccess -> {
                     _signInResultEvent.send(SignInResultEvent.Success(signInMainRouter))
                 }
+
                 is Result.ApiError -> _signInResultEvent.send(SignInResultEvent.Error(result.message.toString()))
                 is Result.ApiException -> _signInResultEvent.send(SignInResultEvent.Error(result.e.message.toString()))
             }

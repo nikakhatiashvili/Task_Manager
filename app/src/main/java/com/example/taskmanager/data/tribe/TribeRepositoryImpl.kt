@@ -5,9 +5,6 @@ package com.example.taskmanager.data.tribe
 import com.example.taskmanager.common.OkResponse
 import com.example.taskmanager.common.Result
 import com.example.taskmanager.domain.tribe.*
-import com.example.taskmanager.domain.tribe.Invites
-import com.example.taskmanager.domain.tribe.TribeGroup
-import com.example.taskmanager.domain.tribe.UserGroupItem
 import com.google.firebase.auth.FirebaseAuth
 import javax.inject.Inject
 

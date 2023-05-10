@@ -4,7 +4,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.taskmanager.databinding.MessageItemBinding
 import com.example.taskmanager.domain.group.MessagesItem
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Locale
 
 class MessagesItemViewHolder(
     private val binding: MessageItemBinding,

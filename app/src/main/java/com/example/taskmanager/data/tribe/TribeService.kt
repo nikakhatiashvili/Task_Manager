@@ -6,8 +6,10 @@ import com.example.taskmanager.domain.tasks.model.DomainTask
 import com.example.taskmanager.domain.tribe.Invites
 import com.example.taskmanager.domain.tribe.TribeGroup
 import com.example.taskmanager.domain.tribe.UserGroupItem
+import okhttp3.MultipartBody
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Query
 
@@ -24,6 +26,10 @@ interface TribeService {
 
     @GET("group/invites")
     suspend fun getInvites(@Query("firebaseId") firebaseId: String): Result<List<Invites>>
+
+    @Multipart
+    @POST("user/image")
+    suspend fun uploadImage(@Query("imageString") multipartBody: MultipartBody.Part)
 
     @POST("group/invite")
     suspend fun acceptInvite(

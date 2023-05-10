@@ -6,6 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".presentation.profile.ProfileFragment">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/spacing_100dp"
+        android:layout_height="@dimen/spacing_100dp"
+        android:layout_marginStart="@dimen/spacing_24dp"
+        android:layout_marginTop="@dimen/spacing_54dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        style="@style/TextAppearance.TribeManager.Text.Headline"
+        android:text="@string/nikoloz_khatiashvili"
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintStart_toEndOf="@+id/image" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        style="@style/TextAppearance.TribeManager.Text.Caption"
+        android:text="@string/nikoloz_2142"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintStart_toEndOf="@+id/image" />
+
+    <ImageView
+        android:layout_width="@dimen/spacing_32dp"
+        android:layout_height="@dimen/spacing_32dp"
+        android:src="@drawable/baseline_settings_24"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
     <Button
         android:id="@+id/btnCreateTribe"
         android:layout_width="wrap_content"

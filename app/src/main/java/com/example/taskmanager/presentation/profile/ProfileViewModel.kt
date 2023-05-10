@@ -2,12 +2,12 @@ package com.example.taskmanager.presentation.profile
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.taskmanager.domain.tribe.TribeRepository
 import com.example.taskmanager.common.Dispatchers
+import com.example.taskmanager.common.Result
 import com.example.taskmanager.domain.auth.AuthDataStore
 import com.example.taskmanager.domain.manageTribe.TribeDataStore
+import com.example.taskmanager.domain.tribe.TribeRepository
 import com.example.taskmanager.presentation.profile.bot.InviteUi
-import com.example.taskmanager.common.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow

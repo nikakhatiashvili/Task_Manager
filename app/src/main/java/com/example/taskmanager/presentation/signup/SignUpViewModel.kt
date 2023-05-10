@@ -3,11 +3,11 @@ package com.example.taskmanager.presentation.signup
 import android.util.Log.d
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.taskmanager.R
+import com.example.taskmanager.common.Dispatchers
 import com.example.taskmanager.common.ResourceManager
 import com.example.taskmanager.common.Result
 import com.example.taskmanager.domain.auth.SignUpUseCase
-import com.example.taskmanager.R
-import com.example.taskmanager.common.Dispatchers
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -45,8 +45,10 @@ class SignUpViewModel @Inject constructor(
                         )
                     )
                 }
+
                 is Result.ApiError ->
                     _signUpResultEvent.send(SignUpResultEvent.Error(result.message.toString()))
+
                 is Result.ApiException -> d(
                     resourceManager.provide(R.string.error),
                     result.e.message.toString()

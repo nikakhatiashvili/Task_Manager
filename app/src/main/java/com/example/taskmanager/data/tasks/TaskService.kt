@@ -1,8 +1,8 @@
 package com.example.taskmanager.data.tasks
 
 import com.example.taskmanager.common.OkResponse
-import com.example.taskmanager.domain.tasks.model.Habits
 import com.example.taskmanager.common.Result
+import com.example.taskmanager.domain.tasks.model.Habits
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query

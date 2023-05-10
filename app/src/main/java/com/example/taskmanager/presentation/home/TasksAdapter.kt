@@ -5,9 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.taskmanager.domain.tasks.model.CompleteTask
 import com.example.taskmanager.databinding.GroupItemBinding
 import com.example.taskmanager.databinding.TaskBinding
+import com.example.taskmanager.domain.tasks.model.CompleteTask
 
 class TasksAdapter(private val onCompleteChanged: (CompleteTask) -> Unit) :
     ListAdapter<TasksAdapter.ListItem, RecyclerView.ViewHolder>(DiffCallback()) {
@@ -24,10 +24,12 @@ class TasksAdapter(private val onCompleteChanged: (CompleteTask) -> Unit) :
                     GroupItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
                 GroupViewHolder(view)
             }
+
             TASK_VIEW_TYPE -> {
                 val view = TaskBinding.inflate(LayoutInflater.from(parent.context), parent, false)
                 TaskViewHolder(view, onCompleteChanged)
             }
+
             else -> throw IllegalArgumentException("Invalid view type")
         }
     }
@@ -75,8 +77,10 @@ class TasksAdapter(private val onCompleteChanged: (CompleteTask) -> Unit) :
             return when {
                 oldItem is ListItem.GroupItem && newItem is
                         ListItem.GroupItem -> oldItem.id == newItem.id
+
                 oldItem is ListItem.TaskItem && newItem is
                         ListItem.TaskItem -> oldItem.task.id == newItem.task.id
+
                 else -> false
             }
         }

@@ -1,9 +1,9 @@
 package com.example.taskmanager.presentation.groups
 
 import android.view.View
+import com.example.taskmanager.domain.tribe.UserGroupItem
 import com.example.taskmanager.presentation.common.gone
 import com.example.taskmanager.presentation.common.visible
-import com.example.taskmanager.domain.tribe.UserGroupItem
 
 interface GroupsUi {
     fun apply(

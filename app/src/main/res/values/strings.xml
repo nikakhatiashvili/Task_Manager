@@ -76,6 +76,20 @@
     <string name="write_new">write down 5 things you have acomplished every day</string>
     <string name="is_this_task_for_everyone">is this Task for everyone?</string>
     <string name="submit">Submit</string>
+    <string name="nikoloz_2142">nikoloz#2142</string>
+    <string name="nikoloz_khatiashvili">Nikoloz Khatiashvili</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="add_photo">Add Photo!</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="permission_required"> Permission Required</string>
+    <string name="permission_req_dialog">If you want to use his feature, app needs this permission, please accept it</string>
+    <string name="deny_from_dialog">No, i do not want to accept it</string>
+    <string name="accept_from_dialog">I will accept it, so ask permission again</string>
+    <string name="permission_message_from_snackbar">I will accept it, so ask permission again</string>
+    <string name="settings">Settings</string>
+    <string name="Package">Package</string>
 
     <string-array name="habits">
         <item>@string/reading</item>

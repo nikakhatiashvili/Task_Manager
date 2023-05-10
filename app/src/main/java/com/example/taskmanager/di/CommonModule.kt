@@ -1,7 +1,6 @@
 package com.example.taskmanager.di
 
 import android.content.Context
-import com.example.taskmanager.R
 import com.example.taskmanager.common.Dispatchers
 import com.example.taskmanager.common.ResourceManager
 import com.example.taskmanager.data.auth.AuthService
@@ -11,7 +10,6 @@ import com.example.taskmanager.data.tasks.TasksRepositoryImpl
 import com.example.taskmanager.data.tribe.TribeService
 import com.example.taskmanager.domain.tasks.TasksRepository
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

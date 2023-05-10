@@ -9,10 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.example.taskmanager.R
 import com.example.taskmanager.common.Result
-import com.example.taskmanager.presentation.common.collectFlow
-import com.example.taskmanager.presentation.common.viewBinding
 import com.example.taskmanager.databinding.DialogInviteBinding
 import com.example.taskmanager.databinding.TribeBottomSheetBinding
+import com.example.taskmanager.presentation.common.collectFlow
+import com.example.taskmanager.presentation.common.viewBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -72,6 +72,7 @@ class TribeBottomSheet : BottomSheetDialogFragment() {
                         viewModel.getGroups()
                         dismiss()
                     }
+
                     is Result.ApiError -> {
                         Toast.makeText(
                             requireContext(),
@@ -104,6 +105,7 @@ class TribeBottomSheet : BottomSheetDialogFragment() {
                         dialog.dismiss()
                         dismiss()
                     }
+
                     is Result.ApiError -> {
                         Toast.makeText(
                             requireContext(),

@@ -1,8 +1,8 @@
 package com.example.taskmanager.presentation.signup
 
 import android.content.Context
-import com.example.taskmanager.presentation.common.showMessage
 import com.example.taskmanager.R
+import com.example.taskmanager.presentation.common.showMessage
 
 interface SignUpResultEvent {
 

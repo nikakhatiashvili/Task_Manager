@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.example.taskmanager.presentation.common.toast
 import com.example.taskmanager.R
 import com.example.taskmanager.databinding.TribeDialogBinding
+import com.example.taskmanager.presentation.common.toast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -3,8 +3,8 @@ package com.example.taskmanager.presentation.tribe
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.taskmanager.R
-import com.example.taskmanager.common.Result
 import com.example.taskmanager.common.ResourceManager
+import com.example.taskmanager.common.Result
 import com.example.taskmanager.domain.manageTribe.ManageTribeRepository
 import com.example.taskmanager.domain.tasks.model.DomainTask
 import dagger.hilt.android.lifecycle.HiltViewModel

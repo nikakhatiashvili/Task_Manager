@@ -7,12 +7,12 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taskmanager.R
-import com.example.taskmanager.presentation.common.viewBinding
-import com.example.taskmanager.presentation.detail.adapter.GroupMessagesAdapter
-import com.example.taskmanager.presentation.detail.adapter.RepositoryLoadStateAdapter
 import com.example.taskmanager.databinding.FragmentDetailBinding
 import com.example.taskmanager.presentation.common.collectFlow
 import com.example.taskmanager.presentation.common.onClick
+import com.example.taskmanager.presentation.common.viewBinding
+import com.example.taskmanager.presentation.detail.adapter.GroupMessagesAdapter
+import com.example.taskmanager.presentation.detail.adapter.RepositoryLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
