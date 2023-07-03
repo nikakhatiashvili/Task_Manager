@@ -7,7 +7,14 @@ import com.example.taskmanager.common.Result
 import com.example.taskmanager.domain.tasks.TasksRepository
 import com.example.taskmanager.domain.tasks.model.Habits
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.TestCoroutineScope
+import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest
+import okhttp3.internal.wait
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -29,8 +36,6 @@ class HomeViewModelTest {
     @Mock
     private lateinit var dispatchers: Dispatchers
 
-
-
     private lateinit var viewModel:HomeViewModel
 
     @Before
@@ -50,26 +55,24 @@ class HomeViewModelTest {
 
     @Test
     fun `getTasks should set taskState to ErrorUi after api call fails`() = runTest {
-        val tasksResponse = Habits(emptyList())
         val result = Result.ApiError<Habits>(1,"")
         Mockito.`when`(repository.getTasks()).thenReturn(result)
         viewModel = HomeViewModel(repository,dispatchers)
         assert(viewModel.taskState.value is HomeUi.ErrorUi)
     }
 
-//    @Test
-//    fun `getTasks should set taskState to LoadingUi before tasks are retrieved`() = runTest {
-//        val tasksResponse = Habits(emptyList())
-//        val result = Result.ApiSuccess(tasksResponse)
-//        Mockito.`when`(repository.getTasks()).then {
-//            dispatchers.launchBackground(TestCoroutineScope()){
-//                delay(10000)
-//            }.wait()
-//            return@then result
-//        }
-//        viewModel = HomeViewModel(repository,dispatchers)
-//        assert(viewModel.taskState.value is HomeUi.Loading)
-//        println(viewModel.taskState.value)
-//    }
+    @Test
+    fun `getTasks should set taskState to LoadingUi before tasks are retrieved`() = runTest {
+        val tasksResponse = Habits(emptyList())
+        val result = Result.ApiSuccess(tasksResponse)
+        Mockito.`when`(repository.getTasks()).then {
+            runBlocking {
+                this.cancel("waiting")
+            }.wait()
+            return@then result
+        }
+        viewModel = HomeViewModel(repository,dispatchers)
+        assert(viewModel.taskState.value is HomeUi.Loading)
+    }
 
 }
