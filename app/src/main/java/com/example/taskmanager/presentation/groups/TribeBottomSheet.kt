@@ -81,6 +81,8 @@ class TribeBottomSheet : BottomSheetDialogFragment() {
                         ).show()
                         dismiss()
                     }
+
+                    else -> {}
                 }
             }
         }
@@ -115,6 +117,8 @@ class TribeBottomSheet : BottomSheetDialogFragment() {
                         dialog.dismiss()
                         dismiss()
                     }
+
+                    else -> {}
                 }
             }
         }

@@ -36,6 +36,7 @@ class GroupsViewModel @Inject constructor(
         viewModelScope.launch(kotlinx.coroutines.Dispatchers.IO) {
             _inviteState.emit(manageTribeRepository.inviteUser(email))
         }
+
     }
 
     fun getGroups() {

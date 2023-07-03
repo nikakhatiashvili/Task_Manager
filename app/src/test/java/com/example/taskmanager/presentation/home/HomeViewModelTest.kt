@@ -1,7 +1,5 @@
 package com.example.taskmanager.presentation.home
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.lifecycle.viewModelScope
 import com.example.taskmanager.MainDispatcherRule
 import com.example.taskmanager.TestDispachers
 import com.example.taskmanager.common.Dispatchers
@@ -9,11 +7,6 @@ import com.example.taskmanager.common.Result
 import com.example.taskmanager.domain.tasks.TasksRepository
 import com.example.taskmanager.domain.tasks.model.Habits
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.test.TestCoroutineScope
-import kotlinx.coroutines.test.TestDispatcher
-import kotlinx.coroutines.test.TestScope
-import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
@@ -23,9 +16,6 @@ import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
 import org.mockito.junit.MockitoJUnitRunner
-import kotlin.coroutines.EmptyCoroutineContext
-import kotlin.coroutines.coroutineContext
-
 
 @RunWith(MockitoJUnitRunner::class)
 class HomeViewModelTest {
@@ -35,42 +25,51 @@ class HomeViewModelTest {
 
     @Mock
     private lateinit var repository: TasksRepository
+
     @Mock
     private lateinit var dispatchers: Dispatchers
 
-//    @Rule
-//    @JvmField
-//    val testCoroutineRule = MainCoroutineRule()
+
 
     private lateinit var viewModel:HomeViewModel
 
-    @OptIn(ExperimentalCoroutinesApi::class)
     @Before
     fun setup() {
         MockitoAnnotations.initMocks(this)
         dispatchers = TestDispachers(mainDispatcherRule.testDispatcher)
-
-        val tasksResponse = Habits(emptyList())
-        val result = Result.ApiSuccess(tasksResponse)
-        runTest {
-            Mockito.`when`(repository.getTasks()).thenReturn(result)
-        }
-
-        viewModel = HomeViewModel(repository,dispatchers )
     }
-
-
 
     @Test
     fun `getTasks should set taskState to SuccessUi when tasks are retrieved successfully`() = runTest {
+        val tasksResponse = Habits(emptyList())
+        val result = Result.ApiSuccess(tasksResponse)
+        Mockito.`when`(repository.getTasks()).thenReturn(result)
+        viewModel = HomeViewModel(repository,dispatchers)
         assert(viewModel.taskState.value is HomeUi.SuccessUi)
     }
 
-    fun getTasks() {
+    @Test
+    fun `getTasks should set taskState to ErrorUi after api call fails`() = runTest {
+        val tasksResponse = Habits(emptyList())
+        val result = Result.ApiError<Habits>(1,"")
+        Mockito.`when`(repository.getTasks()).thenReturn(result)
+        viewModel = HomeViewModel(repository,dispatchers)
+        assert(viewModel.taskState.value is HomeUi.ErrorUi)
     }
 
+//    @Test
+//    fun `getTasks should set taskState to LoadingUi before tasks are retrieved`() = runTest {
+//        val tasksResponse = Habits(emptyList())
+//        val result = Result.ApiSuccess(tasksResponse)
+//        Mockito.`when`(repository.getTasks()).then {
+//            dispatchers.launchBackground(TestCoroutineScope()){
+//                delay(10000)
+//            }.wait()
+//            return@then result
+//        }
+//        viewModel = HomeViewModel(repository,dispatchers)
+//        assert(viewModel.taskState.value is HomeUi.Loading)
+//        println(viewModel.taskState.value)
+//    }
 
-    fun updateTask() {
-
-    }
 }
